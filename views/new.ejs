@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Meeting</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class=" nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/users/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+    <div class="row">
+        <h1 style="text-align: center;"> add values </h1>
+        <div style="width: 30%; margin: 25px auto;">  
+            <form action="/users/dashboard" method="post">
+                
+                <div class="form-group"> <input class="form-control" type="date" name="date" placeholder="date"></div>
+                <div class="form-group"> <input class="form-control" type="time" name="time" placeholder="time"></div>
+                <div class="form-group"> <input class="form-control" type="text" name="details" placeholder="details"></div>
+                <!-- <input type="hidden" name="name" value=<%= user %> > -->
+                <div class="form-group"> <button class="btn btn-lg btn-default btn-block btn-primary">submit</button></div>
+            </form>
+            <a href="/users/dashboard">Go back</a>
+        </div>
+    </div>
+    
+</div>
+<%- include('partials/footer') %>
